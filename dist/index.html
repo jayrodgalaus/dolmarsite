@@ -66,31 +66,6 @@
         </div>
     </div>
     <div class="full-viewport"></div>
-    <script type="module">
-        import Swiper from 'swiper';
-
-        const swiper = new Swiper('.swiper-container', {
-            slidesPerView: 1,
-            loop: true,
-            autoplay: {
-                delay: 3000,
-            },
-            pagination: {
-                el: '.swiper-pagination',
-                clickable: true,
-            },
-            navigation: {
-                nextEl: '.swiper-button-next',
-                prevEl: '.swiper-button-prev',
-            },
-        });
-
-        import Rellax from 'rellax';
-
-        const rellax = new Rellax('.swiper-slide', {
-            center: true, // Centers the parallax effect for alignment
-            speed: -2, // Adjust speed for parallax effect
-        });
-    </script>
+    <script type="module" src="/assets/js/main.js"></script>
 </body>
 </html>
