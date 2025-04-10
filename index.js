@@ -7,7 +7,7 @@ const app = express();
 app.use(express.static(path.join(__dirname, 'dist')));
 
 // Default route to serve the React app
-app.get('/', (req, res) => {
+app.get('*', (req, res) => {
     res.sendFile(path.join(__dirname, 'dist/index.html'));
 });
 
