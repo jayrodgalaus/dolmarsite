@@ -48,7 +48,7 @@
     <section id="section1">
         <h1 style="color: white; text-align: center; padding-top: 40vh;">Parallax Background</h1>
     </section>
-    <section style="height: 100vh; background-color: #f4f4f4;">
+    <section style="height: 100vh; background-color: #f4f4f4;" class="fade-in">
         <h2 style="text-align: center; padding-top: 40vh;">Scroll to See the Effect!</h2>
     </section>
     
@@ -61,6 +61,14 @@
         const rellax = new Rellax('.rellax', {
             speed: -2, // Adjust overall parallax speed
             center: true, // Align elements with the center of the viewport
+        });
+        ScrollReveal().reveal('.fade-in', {
+            duration: 1000, // Animation duration in milliseconds
+            origin: 'bottom', // Starting position ('top', 'bottom', 'left', 'right')
+            distance: '50px', // Distance the element moves
+            easing: 'ease-in-out', // Animation easing
+            opacity: 0, // Initial opacity
+            delay: 200, // Delay before the animation starts
         });
     </script>
 </body>
