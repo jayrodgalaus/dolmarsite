@@ -20,13 +20,7 @@
             align-items: center;
             color: white;
         }
-        .rellax {
-            position: absolute;
-            width: 100%;
-            height: 100%;
-            background-size: cover;
-            background-position: center;
-        }
+        
         .content {
             position: relative;
             z-index: 10; /* Ensure text stays visible above parallax */
@@ -61,7 +55,7 @@
     <script>
         // Initialize Rellax
         const rellax = new Rellax('.rellax', {
-            speed: 2, // Adjust overall parallax speed
+            speed: -5, // Adjust overall parallax speed
             center: true, // Align elements with the center of the viewport
         });
         ScrollReveal().reveal('.fade-in', {
