@@ -3,15 +3,16 @@ const path = require('path');
 
 const app = express();
 
-// Serve static files from the "public" folder
-app.use(express.static(path.join(__dirname, 'public')));
+// Serve the Vite build output (dist folder)
+app.use(express.static(path.join(__dirname, 'dist')));
 
-// Default route (optional, for custom handling)
-app.get('/', (req, res) => {
-  res.sendFile(path.join(__dirname, 'public/index.html'));
+// Default route to serve the React app
+app.get('*', (req, res) => {
+    res.sendFile(path.join(__dirname, 'dist/index.html'));
 });
 
+// Use the dynamic PORT environment variable (especially for Vercel)
 const port = process.env.PORT || 3000;
 app.listen(port, () => {
-  console.log(`Server running on http://localhost:${port}`);
+    console.log(`Server running on http://localhost:${port}`);
 });
